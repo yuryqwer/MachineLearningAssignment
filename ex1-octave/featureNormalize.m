@@ -25,14 +25,15 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
+
 mu = mean(X);
 sigma = std(X);
-all_mu = ones(size(X, 1), 1)*mu;  % expand mu to be a m*n matrix
-                                  % with the same row so that it
-                                  % can be subtracted by X directly
-                                  % instead of using for loop
-all_sigma = ones(size(X, 1), 1)*sigma;  % the same as above
-X_norm = (X-all_mu)./all_sigma;
+X_norm = (X - mu) ./ sigma;
+
+
+
+
+
 
 % ============================================================
 
